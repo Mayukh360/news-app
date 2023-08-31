@@ -34,7 +34,7 @@ export default function Navbar() {
                     Sports
                 </button>
                 <button
-                    onClick={() => navigatePage("/politics")}
+                    onClick={() => navigatePage("/body")}
                     className="text-white hover:text-gray-300 focus:outline-none"
                 >
                     Politics
