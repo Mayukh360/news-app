@@ -15,14 +15,18 @@ export default function Sports() {
   return (
     <div>
         <Navbar/>
-        <div>
-        {newsData && newsData.map((item)=>(
-            <li key={item.article_id}>Titile:{item.title}
-            <img src={item.image_url}/>
-            Content:{item.content}
-            </li>
-        ))}
-    </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    {newsData.map((item) => (
+      <div key={item.article_id} className="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src={item.image_url} alt="News" className="w-full h-48 object-cover" />
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+          <p className="text-gray-600 mb-4">{item.content}</p>
+          <a href={item.link} className="text-blue-500 hover:underline">Read More</a>
+        </div>
+      </div>
+    ))}
+  </div>
     </div>
   )
 }
