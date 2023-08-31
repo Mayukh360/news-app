@@ -1,10 +1,10 @@
-import MainBody from '@/components/body/bodycomponents/MainBody'
+import Sports from '@/components/body/bodycomponents/Sports'
 import React from 'react'
 
 export default function index() {
   return (
     <div>
-        <MainBody/>
+        <Sports/>
     </div>
   )
 }
